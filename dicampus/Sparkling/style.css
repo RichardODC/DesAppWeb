@@ -1,0 +1,97 @@
+:root {
+  --c1: rgb(255, 113, 113);
+  --c2: rgb(227, 219, 219);
+  --ff: Arial; 
+}
+
+
+h2,h3,h4,h5,h6 {
+    font-family: var(--ff);
+    color: var(--c1);
+}
+
+body{
+background-color: rgb(255, 255, 255);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--c1);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #639868;
+}
+
+
+header nav ul {
+    list-style: none;
+    padding-left: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+.logo{color: black;}
+
+.milogo{
+    color: rgb(0, 0, 0);
+}
+
+main {
+    display: flex;
+    gap: 10px;
+}
+
+aside {
+    width: 40%;
+    padding: 10px;
+    background-color: var(--c2);
+    text-align: right;
+}
+
+section {
+    width: 75%;
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--c1);
+    padding: 20px;
+}
+
+section ul li {
+    margin: 0px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+aside ul li a:hover {
+    color: blue;
+}
+
+* {
+    list-style: none;
+   
+}
+
+*:hover {
+    outline: gray solid 1px;
+
+}

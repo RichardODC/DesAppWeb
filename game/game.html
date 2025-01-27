@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            overflow: hidden;
+            background-color: black; /* Fondo negro */
+            color: white; /* Color del texto blanco */
+        }
+        .enemy {
+            position: absolute;
+            width: 50px; /* Ajusta el tamaño de las naves según sea necesario */
+            height: 50px; /* Ajusta el tamaño de las naves según sea necesario */
+            transition: left 1s, top 1s; /* Movimientos suaves */
+        }
+        #counter {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">Explosiones: 0</div> <!-- Contador de explosiones -->
+
+    <script>
+        let explosionCount = 0;
+        let totalEnemies = 6; // Número inicial de naves
+
+        function exp(nave) {
+            nave.src = "img/explosion.gif";
+            nave.style.width = "50px"; // Ajusta el tamaño de la explosión
+            nave.style.height = "50px"; // Ajusta el tamaño de la explosión
+            explosionCount++;
+            document.getElementById('counter').textContent = `Explosiones: ${explosionCount}`;
+            nave.classList.remove('enemy'); // Remover la clase para que no se mueva más
+            setTimeout(() => {
+                nave.remove(); // Elimina la nave después de 1 segundo
+                checkAllDestroyed();
+            }, 1000);
+        }
+
+        function moveRandomly(element) {
+            const x = Math.random() * (window.innerWidth - element.clientWidth);
+            const y = Math.random() * (window.innerHeight - element.clientHeight);
+            element.style.left = `${x}px`;
+            element.style.top = `${y}px`;
+        }
+
+        function startMoving() {
+            const enemies = document.querySelectorAll('.enemy');
+            enemies.forEach(enemy => {
+                setInterval(() => moveRandomly(enemy), 1000); // Mueve cada nave cada 1 segundo
+            });
+        }
+
+        function createEnemies(number) {
+            const body = document.body;
+            for (let i = 0; i < number; i++) {
+                const enemy = document.createElement('img');
+                enemy.src = "img/tie.webp";
+                enemy.alt = "tie";
+                enemy.className = "enemy";
+                enemy.onclick = () => exp(enemy);
+                body.appendChild(enemy);
+            }
+            startMoving();
+        }
+
+        function checkAllDestroyed() {
+            const remainingEnemies = document.querySelectorAll('.enemy').length;
+            if (remainingEnemies === 0) {
+                totalEnemies *= 3; // Triplica el número de naves
+                createEnemies(totalEnemies); // Crea nuevas naves
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createEnemies(totalEnemies); // Crear naves iniciales
+        });
+    </script>
+</body>
+</html>

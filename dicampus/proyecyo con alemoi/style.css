@@ -1,0 +1,16 @@
+*{
+    outline: 1px red solid;
+    padding: 5px;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    }
+
+.divheader{
+    background-image: url(https://imgs.search.brave.com/9ep9remaudC9bU4dxfxk2e_vDgNtlsiICnjVnEJw5sI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmFyY2Vsby5jb20v/Z3VpYS10dXJpc21v/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9xdWUt/dmlzaXRhci1lbi1h/c3R1cmlhcy5qcGc);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Configuración de codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista para dispositivos móviles -->
+    <title>Document</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <header>
+        <div>logo</div> <!-- Logo del sitio -->
+        <nav>
+            <ul>
+                <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li> <!-- Enlace a la sección Inicio -->
+                <li><a href="#escuela" onclick="mostrarSeccion('escuela')">Escuela</a></li> <!-- Enlace a la sección Escuela -->
+                <li><a href="#contactos" onclick="mostrarSeccion('contactos')">Contacto</a></li> <!-- Enlace a la sección Contacto -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h4>Inicio</h4> <!-- Título de la sección Inicio -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam asperiores aspernatur voluptatum, rem tenetur earum odio, eveniet repellat in totam, architecto impedit cupiditate necessitatibus ut deleniti provident. Veritatis, voluptatibus impedit.</p> <!-- Contenido de la sección Inicio -->
+        </section>
+        <section id="escuela">
+            <h4>Escuela</h4> <!-- Título de la sección Escuela -->
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati natus iure illum laborum delectus explicabo quasi dicta illo cum, perferendis quae iusto, sed consequuntur temporibus. Culpa sit illum quo delectus.</p> <!-- Contenido de la sección Escuela -->
+        </section>       
+        <section id="contactos">
+            <h4>Contactos</h4> <!-- Título de la sección Contactos -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos officiis vero earum amet debitis illo soluta asperiores sequi adipisci. Eveniet cum delectus ratione maxime magni numquam accusamus repudiandae repellendus suscipit.</p> <!-- Contenido de la sección Contactos -->
+        </section>       
+    </main>
+    <footer>&copy; <!-- Pie de página --></footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            const sections = document.querySelectorAll('main section'); // Selecciona todas las secciones dentro de main
+            sections.forEach(section => {
+                section.style.display = 'none'; // Oculta todas las secciones
+            });
+            document.getElementById(id).style.display = 'block'; // Muestra la sección con el id especificado
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            mostrarSeccion('inicio'); // Mostrar la sección de inicio por defecto cuando se carga la página
+        });
+    </script>
+</body>
+</html>

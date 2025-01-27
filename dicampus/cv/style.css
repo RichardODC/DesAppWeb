@@ -1,0 +1,53 @@
+body {
+    max-width: 1000px;
+    margin: 30px;
+    font-family: Arial, sans-serif;
+    position: center;
+    padding-top: 30px;
+    background-color: rgb(231, 231, 231);
+}
+
+img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: auto;
+}
+
+section {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(219, 219, 239);
+    border-radius: 15px;
+}
+
+#experiencia {
+    text-align: c;
+}
+
+#experiencia ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experiencia li {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+}
+
+*:hover {
+    border: 1px solid black;
+}
+
+* {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}

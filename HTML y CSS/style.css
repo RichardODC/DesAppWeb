@@ -1,0 +1,74 @@
+:root{
+    --c1: #a8dadc; /* Color relajante azul claro */
+    --c2: #457b9d; /* Color relajante azul medio */
+    --c3: #1d3557; /* Color relajante azul oscuro */
+    --c4: #f1faee; /* Color relajante blanco */
+    --c5: #f6848d; /* Color relajante rojo suave */
+    --br: 10px;
+    --pad: 20px;
+    --ff: Arial, Helvetica, sans-serif;
+    --mw: 1200px;
+}
+
+*:hover{    
+    outline: 1px solid red;
+}
+
+html, body {
+    
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--ff);
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--c1);
+}
+
+header{
+    background-color: var(--c2);
+    color: var(--c4);
+    text-align: center;
+    padding: 10px;
+}
+
+li{
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+    color: var(--c4);
+}
+
+h1{
+    font-size: 2.5em;
+    color: var(--c3);
+    text-align: center;
+    padding-top: 10px;
+}
+
+h2{
+    font-size: 2em;
+    color: var(--c3);
+    text-align: center;
+    padding-top: 10px;
+}
+
+h3{
+    font-size: 1.5em;
+    color: var(--c4);
+    text-align: center;
+    padding-top: 10px;
+}
+
+main{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: var(--mw);
+}
+
+section{
+    background-color: var(--c5);
+    color: var(--c3);
+}

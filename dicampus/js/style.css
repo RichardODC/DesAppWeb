@@ -1,0 +1,52 @@
+
+*{padding: 20px;}
+
+
+*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: ;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(120, 162, 220);
+    padding: 10px;
+    border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+    
+
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+border-style: none;
+box-shadow: 2px 2px 2px black;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: 2px 2px 2px black;
+
+
+}
+
+#saludo {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+*:hover{outline:1px red solid}

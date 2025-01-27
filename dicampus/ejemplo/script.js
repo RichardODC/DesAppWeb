@@ -1,0 +1,11 @@
+var nom = "Ricardo";
+var eda = 38;
+var pel = "The Beach";
+var pos="img/foto.png"
+var est = 2000;
+var act = 2024;
+var aniosDesdeEstreno = act - est;
+var edadEnEstreno = eda - aniosDesdeEstreno;
+var tod = "La película " + pel + " se estrenó hace " + aniosDesdeEstreno + " años.";
+var res = act - est;
+document.body.innerText = tod + " " + nom + " tenía " + edadEnEstreno + " años en el momento del estreno. ";
